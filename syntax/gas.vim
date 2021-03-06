@@ -86,10 +86,10 @@ syn keyword gasOperandSize	byte word dword qword xmmword ymmword zmmword nextgro
 " constants
 syn region  gasString		start=/"/  end=/"/ skip=/\\"/
 syn match   gasCharacter	/'\(?\|\\?\)/
-syn match   gasDecimalNumber	/\$\?-\?\d\+/
-syn match   gasBinaryNumber	/\$\?-\?0b[01]\+/
-syn match   gasOctalNumber	/\$\?-\?0\d\+/
-syn match   gasHexNumber	/\$\?-\?0x\x\+/
+syn match   gasDecimalNumber	/\<\$\?-\?\d\+\>/
+syn match   gasBinaryNumber	/\<\$\?-\?0b[01]\+\>/
+syn match   gasOctalNumber	/\<\$\?-\?0\d\+\>/
+syn match   gasHexNumber	/\<\$\?-\?0x\x\+\>/
 " -- TODO: gasFloatNumber
 
 " local label needs to be matched *after* numerics
