@@ -51,21 +51,37 @@ syn keyword gasRegisterX86	%rax %rbx %rcx %rdx %rdi %rsi %rsp %rbp
 syn keyword gasRegisterX86	%eax %ebx %ecx %edx %ax %bx %cx %dx %ah %al %bh %bl %ch %cl %dh %dl
 syn keyword gasRegisterX86	%edi %esi %esp %ebp %di %si %sp %bp %sph %spl %bph %bpl
 syn keyword gasRegisterX86	%cs %ds %es %fs %gs %ss %ip %eip %rip %eflags
+syn keyword gasRegisterX86	rax rbx rcx rdx rdi rsi rsp rbp
+syn keyword gasRegisterX86	eax ebx ecx edx ax bx cx dx ah al bh bl ch cl dh dl
+syn keyword gasRegisterX86	edi esi esp ebp di si sp bp sph spl bph bpl
+syn keyword gasRegisterX86	cs ds es fs gs ss ip eip rip eflags
 syn match   gasRegisterX86	/\<%r\([8-9]\|1[0-5]\)[lwd]\?\>/
+syn match   gasRegisterX86	/\<r\([8-9]\|1[0-5]\)[lwd]\?\>/
 
 " i*86 special registers
 syn match gasRegisterX86Cr	/\<%cr[0-8]\>/
+syn match gasRegisterX86Cr	/\<cr[0-8]\>/
 syn match gasRegisterX86Dr	/\<%dr[0-8]\>/
+syn match gasRegisterX86Dr	/\<dr[0-8]\>/
 syn match gasRegisterX86Tr	/\<%tr[0-8]\>/
+syn match gasRegisterX86Tr	/\<tr[0-8]\>/
 syn match gasRegisterX86Fp	/\<%sp\(([0-7])\)\?\>/
-syn match gasRegisterX86MMX	/\<%x\?mm[0-7]\>/
+syn match gasRegisterX86Fp	/\<sp\(([0-7])\)\?\>/
+syn keyword gasRegisterX86MMX	%xmm0 %xmm1 %xmm2 %xmm3 %xmm4 %xmm5 %xmm6 %xmm7
+syn keyword gasRegisterX86MMX	xmm0 xmm1 xmm2 xmm3 xmm4 xmm5 xmm6 xmm7
+syn keyword gasRegisterX86MMX	%ymm0 %ymm1 %ymm2 %ymm3 %ymm4 %ymm5 %ymm6 %ymm7
+syn keyword gasRegisterX86MMX	ymm0 ymm1 ymm2 ymm3 ymm4 ymm5 ymm6 ymm7
 
 " symbols and labels
 
 syn match   gasLabel		/[-_$.A-Za-z0-9]\+\s*:/
-syn match   gasSymbol		/\<[^; \t()]\+\>/
-syn match   gasSymbolRef	/\$[-_$.A-Za-z][-_$.A-Za-z0-9]*\>/
+syn match   gasSymbolRef	/\<[-_$.A-Za-z][-_$.A-Za-z0-9]*\>/
+syn match   gasSymbol		/^[-_$.a-zA-Z][-_$.a-zA-Z0-9]*/
 syn match   gasSpecial		/\<[$.]\>/
+
+" intel syntax keywords
+syn keyword gasOperandPtr	ptr
+syn keyword gasOperandSize	byte word dword qword xmmword ymmword zmmword nextgroup=gasOperandPtr skipwhite
 
 " constants
 syn region  gasString		start=/"/  end=/"/ skip=/\\"/
@@ -1944,6 +1960,8 @@ hi def link gasDirectiveX86	        gasDirective
 hi def link gasRegisterX86	        gasRegister
 hi def link gasRegisterX86Cr	        gasRegister
 hi def link gasRegisterX86Dr	        gasRegister
+hi def link gasRegisterX86Tr	        gasRegister
+hi def link gasRegisterX86Fp	        gasRegister
 hi def link gasRegisterX86MMX	        gasRegister
 hi def link gasDirectiveARM	        gasDirective
 hi def link gasRegisterARM	        gasRegister
@@ -1955,6 +1973,8 @@ hi def link gasDirective	Preproc
 hi def link gasDirectiveStore	Type
 hi def link gasDirectiveMacro	Macro
 hi def link gasRegister		Identifier
+hi def link gasOperandPtr	StorageClass
+hi def link gasOperandSize	StorageClass
 hi def link gasString		String
 hi def link gasCharacter	Character
 hi def link gasBinaryNumber	Constant
