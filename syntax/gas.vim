@@ -1841,7 +1841,7 @@ syn keyword gasOpcode_ARM_THUMB         asrmi asrpl asrvs asrvc asrhi asrls
 syn keyword gasOpcode_ARM_THUMB         asrge asrlt asrgt asrle asral
 syn keyword gasOpcode_ARM_THUMB         b beq bne bcs bhs bcc blo bmi bpl bvs
 syn keyword gasOpcode_ARM_THUMB         bvc bhi bls bge blt bgt ble bal
-syn keyword gasOpcode_ARM_THUMB         bl bleq blne blcs blhs blcc bllo blmi
+syn keyword gasOpcode_ARM_THUMB         \$bl bleq blne blcs blhs blcc bllo blmi
 syn keyword gasOpcode_ARM_THUMB         blpl blvs blvc blhi blls blge bllt blgt
 syn keyword gasOpcode_ARM_THUMB         blle blal
 syn keyword gasOpcode_ARM_THUMB         bx bxpl bxvs bxvc bxhi bxls bxge bxlt bxgt
