@@ -1973,8 +1973,8 @@ hi def link gasDirective	Preproc
 hi def link gasDirectiveStore	Type
 hi def link gasDirectiveMacro	Macro
 hi def link gasRegister		Identifier
-hi def link gasOperandPtr	StorageClass
-hi def link gasOperandSize	StorageClass
+hi def link gasOperandPtr	Type
+hi def link gasOperandSize	Type
 hi def link gasString		String
 hi def link gasCharacter	Character
 hi def link gasBinaryNumber	Constant
