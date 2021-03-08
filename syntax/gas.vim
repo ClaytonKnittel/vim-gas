@@ -1357,8 +1357,11 @@ syn keyword gasOpcode_SANDYBRIDGE_AVX	vaesdeclast vaesdeclastb vaesdeclastw vaes
 syn keyword gasOpcode_SANDYBRIDGE_AVX	vaesimc vaesimcb vaesimcw vaesimcl vaesimcq
 syn keyword gasOpcode_SANDYBRIDGE_AVX	vaeskeygenassist vaeskeygenassistb vaeskeygenassistw vaeskeygenassistl vaeskeygenassistq
 
-"-- Section: New instructions in Barcelona
-syn keyword gasOpcode_X64_Base		lzcnt
+"-- Section: Intel BMI1 instructions
+syn keyword gasOpcode_SANDYBRIDGE_AVX	andn bextr blsi blsmsk blsr lzcnt lzcntq lzcntl lzcntw tzcnt
+
+"-- Section: Intel BMI2 instructions
+syn keyword gasOpcode_SANDYBRIDGE_AVX	bzhi mulx pdep pext rorx sarx shlx shrx
 
 "-- Section: Intel AVX instructions
 syn keyword gasOpcode_SANDYBRIDGE_AVX	vaddpd vaddpdb vaddpdw vaddpdl vaddpdq
