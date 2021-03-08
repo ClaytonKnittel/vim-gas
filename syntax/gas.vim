@@ -69,8 +69,8 @@ syn match gasRegisterX86Fp	/\<%sp\(([0-7])\)\?\>/
 syn match gasRegisterX86Fp	/\<sp\(([0-7])\)\?\>/
 syn keyword gasRegisterX86MMX	%xmm0 %xmm1 %xmm2 %xmm3 %xmm4 %xmm5 %xmm6 %xmm7
 syn keyword gasRegisterX86MMX	xmm0 xmm1 xmm2 xmm3 xmm4 xmm5 xmm6 xmm7
-syn keyword gasRegisterX86MMX	%ymm0 %ymm1 %ymm2 %ymm3 %ymm4 %ymm5 %ymm6 %ymm7
-syn keyword gasRegisterX86MMX	ymm0 ymm1 ymm2 ymm3 ymm4 ymm5 ymm6 ymm7
+syn keyword gasRegisterX86MMX	%ymm0 %ymm1 %ymm2 %ymm3 %ymm4 %ymm5 %ymm6 %ymm7 %ymm8 %ymm9 %ymm10 %ymm11 %ymm12 %ymm13 %ymm14 %ymm15
+syn keyword gasRegisterX86MMX	ymm0 ymm1 ymm2 ymm3 ymm4 ymm5 ymm6 ymm7 ymm8 ymm9 ymm10 ymm11 ymm12 ymm13 ymm14 ymm15
 
 " symbols and labels
 
